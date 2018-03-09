@@ -2,9 +2,9 @@
   <div id="app">
       <app-layout>
         <app-bar slot="bar" size=24></app-bar>
-        <bottom slot="bottom"></bottom>
+        <bottom slot="bottom" :music_info="music"></bottom>
       </app-layout>
-  </div>  
+  </div>
 </template>
 
 <script>
@@ -21,7 +21,12 @@ export default {
   },
   data() {
     return {
-      msg: "Welcome to Your Vue.js App"
+      msg: "Welcome to Your Vue.js App",
+      music:{
+        music_name:'music',
+        music_cover_src:'./src/assets/img/logo.png',
+        music_author:'zzy'
+      }
     };
   }
 };
