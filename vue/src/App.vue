@@ -1,45 +1,54 @@
 <template>
-  <div id="app">
-      <app-layout>
-        <app-bar slot="bar" size=24></app-bar>
-        <bottom slot="bottom" :music_info="music"></bottom>
-      </app-layout>
-  </div>
+<div id="app">
+  <app-layout>
+    <app-bar slot="bar" size=24></app-bar>
+    <app-content slot="content"></app-content>
+    <bottom slot="bottom" :music_info="music"></bottom>
+  </app-layout>
+</div>
 </template>
 
 <script>
-import appBar from './assets/components/bar/appBar'
-import bottom from './assets/components/bottom/bottom'
-import appLayout from './assets/components/layout/appLayout'
-
+import appBar from './components/bar/appBar'
+import bottom from './components/bottom/bottom'
+import appLayout from './components/layout/appLayout'
+import appContent from './components/content/cotent'
 export default {
   name: "app",
-  components:{
-    'app-bar':appBar,
-    'bottom':bottom,
-    'app-layout':appLayout
+  components: {
+    'app-bar': appBar,
+    'bottom': bottom,
+    'app-layout': appLayout,
+    'app-content': appContent
   },
   data() {
     return {
-      msg: "Welcome to Your Vue.js App",
-      music:{
-        music_name:'music',
-        music_cover_src:'./src/assets/img/logo.png',
-        music_author:'zzy'
+      music: {
+        music_name: '',
+        music_cover_src: '',
+        music_author: ''
       }
     };
+  },
+  mounted() {
+    //do something after mounting vue instance
+    this.$http.get('http://localhost:3000/music').then((res) => {
+      console.log(res.data.music_author)
+      this.music.music_name = res.data.music_name
+      this.music.music_cover_src = res.data.music_cover_src
+      this.music.music_author = res.data.music_author
+      console.log(res.data.music_author)
+    })
   }
 };
 </script>
 
 <style scoped>
-.mt8 {
-  margin-top: 8px;
-}
-.flex-demo {
-  height: 32px;
-  background-color: #e0e0e0;
-  text-align: center;
-  line-height: 32px;
+#app {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: absolute;
+  flex-direction: column;
 }
 </style>

@@ -45,11 +45,12 @@ export default {
     display: flex;
     width: 100%;
     height: 46px;
-    background: rgba(253, 253, 253, 0);
+    background: rgb(255, 255, 255);
     justify-content: space-between;
+    padding: 4px;
     position: fixed;
     bottom: 0;
-    padding: 4px;
+    z-index: 2;
 }
 #bottom-left {
     width: 70%;

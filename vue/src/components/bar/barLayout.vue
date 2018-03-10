@@ -24,7 +24,7 @@ export default {
 }
 #bar-left{
   justify-content: flex-start;
-  
+
 }
 #bar-right{
   justify-content: flex-end;
@@ -40,11 +40,10 @@ export default {
   justify-content: center;
   width: 100%;
   height: 46px;
-  background: rgba(231, 14, 14, 0.788);
+  background: rgb(231, 14, 14);
   color:white;
   position: fixed;
   top: 0;
+  z-index: 2;
 }
 </style>
-
-
