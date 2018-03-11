@@ -5,6 +5,8 @@ import 'muse-ui/dist/muse-ui.css'
 import router from './router/routes'
 import 'material-design-icons/iconfont/material-icons.css'
 import axios from 'axios'
+import 'velocity-animate'
+import 'animate.css'
 Vue.prototype.$http = axios
 Vue.use(MuseUI)
 

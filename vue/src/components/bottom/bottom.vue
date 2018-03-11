@@ -1,7 +1,9 @@
 <template>
 <div id="app-bottom">
   <div id="bottom-left" :music_info="music_info">
-    <div class="music-cover"><img :src="music_info.music_cover_src"></div>
+    <div class="music-cover">
+      <img :src="music_info.music_cover_src">
+    </div>
     <div class="music-info">
       <div class="music-name">{{music_info.music_name}}</div>
       <div class="music-author">{{music_info.music_author}}</div>
@@ -18,7 +20,6 @@
 </div>
 </template>
 <script>
-
 export default {
   components: {
   },

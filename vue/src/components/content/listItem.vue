@@ -1,7 +1,7 @@
 <template>
 <div class="list-item">
   <div class="item-icon">
-    <mu-icon :value="item_icon" size="26"/>
+    <mu-icon :value="item_icon" size="24"/>
   </div>
   <div class='list-title'>
     <div>
