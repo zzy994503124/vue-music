@@ -45,12 +45,22 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
+html{
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding-top: 46px;
+  padding-bottom: 46px;
+}
+body{
+  height: 100%;
+}
 #app {
   width: 100%;
   height: 100%;
   display: flex;
-  position: absolute;
+  position: relative;
   flex-direction: column;
 }
 </style>

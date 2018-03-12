@@ -44,7 +44,6 @@ export default {
   methods: {
     changeActive(e,active) {
       this.active = active
-      console.log(e.currentTarget)
       if (this.active === 'left') {
         this.$router.push({
           path: 'content',

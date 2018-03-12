@@ -1,6 +1,6 @@
 <template>
 <div class="content">
-  <transition leave-active-class="animated zoomOut" enter-active-class="animated zoomIn" mode="out-in" :class="false" duration="1000">
+  <transition leave-active-class="animated fadeOut" enter-active-class="animated fadeIn" mode="out-in" :class="false" duration="500">
     <router-view></router-view>
   </transition>
 
@@ -18,5 +18,6 @@ export default {
 <style lang="less" scoped>
 .content {
     width: 100%;
+    height: 100%;
 }
 </style>

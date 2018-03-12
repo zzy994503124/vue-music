@@ -25,15 +25,18 @@ export default {
         width: 100%;
         height: 46px;
         line-height: 46px;
+        background:  rgb(231, 14, 14);
         z-index: 2;
     }
     .app-content {
-        position: absolute;
-        top: 46px;
+        position: relative;
         display: flex;
         width: 100%;
-        // padding-top: 46px;
-        // padding-bottom: 46px;
+        height: 100%;
+        overflow-y: scroll;
+        &::-webkit-scrollbar{
+          display: none;
+        }
     }
     .app-bottom {
         display: flex;
@@ -41,6 +44,7 @@ export default {
         width: 100%;
         height: 46px;
         line-height: 46px;
+        background: white;
         z-index: 2;
     }
 }

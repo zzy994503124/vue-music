@@ -32,7 +32,6 @@ export default {
   methods: {
     toggleNav(v) {
       this.activeItem = v
-      console.log(this.$refs.bottomBar)
       if (v == 'left')
         Velocity(this.$refs.bottomBar, {
           marginLeft: '0px'
@@ -64,6 +63,8 @@ export default {
     justify-content: flex-start;
     padding: 8px 10px;
     cursor: pointer;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 12px;
     .bottom-bar-container {
         display: flex;
         position: relative;

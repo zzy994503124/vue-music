@@ -30,18 +30,21 @@ export default {
     width: 100%;
     height: 50px;
     color: rgb(231, 14, 14);
-    padding: 0;
+    padding: 8px;
     cursor: pointer;
     .item-icon {
       width: 50px;
       display: flex;
       justify-content: center;
       flex-direction: column;
-      align-items: center;
+      align-items: flex-start;
+      span{
+        padding: 0;
+      }
     }
     .list-title {
-        border-bottom: 1px solid rgb(163, 163, 163);
-        margin-left: 10px;
+        border-bottom: 1px solid rgb(238, 238, 238);
+        margin-left: 0px;
         width: 100%;
         text-align: center;
         display: flex;
@@ -65,6 +68,7 @@ export default {
         }
         span {
             color: rgb(163, 163, 163);
+            margin-left: 8px;
         }
     }
 }
